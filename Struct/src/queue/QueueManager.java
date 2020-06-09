@@ -1,4 +1,4 @@
-package test;
+package queue;
 
 public class QueueManager {
     
@@ -7,7 +7,7 @@ public class QueueManager {
     private char vain = '#';
     
     /**
-     * 判队空
+     * 判队�?
      * @return
      */
     public boolean empty() {
@@ -18,14 +18,14 @@ public class QueueManager {
     }
     
     /**
-     * 初始化队列长度
+     * 初始化队列长�?
      * @param length
      */
     public void initQueue(int length) {
         q.data = new char[length];
         q.front = -1;
         q.rear = -1;
-        System.out.println("已初始化队列，长度为：" + q.data.length);
+        System.out.println("已初始化队列，长度为�?" + q.data.length);
     }
     
     /**
@@ -50,7 +50,7 @@ public class QueueManager {
             int front = q.front;
             front = (front + 1) % q.data.length;//循环队列
             q.front = front;
-            //q.data[q.front] = vain;//出队，队头置空
+            //q.data[q.front] = vain;//出队，队头置�?
         }
     }
     
@@ -95,7 +95,7 @@ public class QueueManager {
     }
     
     /**
-     * 判断队列是否满
+     * 判断队列是否�?
      * @return
      */
     public boolean isFull() {

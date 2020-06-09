@@ -10,7 +10,7 @@ public class QueueManager {
      * 判队空
      * @return
      */
-    private boolean empty() {
+    public boolean empty() {
         if(q.front == q.rear) {
             return true;
         }
@@ -50,7 +50,7 @@ public class QueueManager {
             int front = q.front;
             front = (front + 1) % q.data.length;//循环队列
             q.front = front;
-            q.data[q.front] = vain;//出队，队头置空
+            //q.data[q.front] = vain;//出队，队头置空
         }
     }
     
@@ -79,5 +79,29 @@ public class QueueManager {
                 System.out.println(c);
             } 
         }    
+    }
+    
+    /**
+     * 判断数据是否存在
+     * @param c
+     * @return
+     */
+    public boolean isExists(char c) {
+        for(char ch : q.data) {
+            if(ch == c)
+                return true;
+        }
+        return false;
+    }
+    
+    /**
+     * 判断队列是否满
+     * @return
+     */
+    public boolean isFull() {
+        if((q.rear + 1) % q.data.length == q.front) {
+            return true;
+        }
+        return false;
     }
 }

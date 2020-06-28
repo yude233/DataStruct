@@ -21,6 +21,7 @@ public class AdjMatrix {
         return edge;
     }
 
+    
     /**
      * 初始化结点
      */
